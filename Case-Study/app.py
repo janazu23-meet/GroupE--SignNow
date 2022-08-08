@@ -26,22 +26,22 @@ mission = {"title": "Our International Mision", "content": "Managing accessibili
 
 @app.route('/')
 def index():
-	return render_template('index.html', whyus=why_us ,vision=vision, mission=mission)
+	return render_template('index.html', why_us=whyus ,vision=vision, mission=mission)
 
 @app.route('/blog')
 def blog():
   return render_template('blog.html')
 
 @app.route('/portfolio-details')
-def portfolio-details():
+def portfolio_details():
   return render_template('portfolio-details.html')
 
 @app.route('/blog-single')
-def blog-single():
+def blog_single():
   return render_template('blog-single.html')
 
 @app.route('/inner-page')
-def inner-page():
+def inner_page():
   return render_template('inner-page.html')
 
 if __name__ == '__main__':

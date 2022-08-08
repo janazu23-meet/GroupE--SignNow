@@ -21,10 +21,12 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = "yuggnoijibgyfdrdv"
 
 whyus = {"name": "Why Us?", "information": ["A combination of technology and human touch as it relates to sign language translation. Sign language translation is one of the only domains in which the human touch is more important than the related technology", "Accessible user experience for all categories of deaf persons: elderly, deaf and blind and more. Minimum clicks involved", "One stop shop - everything the deaf community needs in one place", "Minimum bureaucracy. We wish we could switch 'Minimum' to 'zero'", "Free for deaf users - Thanks to our B2B&B2G business models", "All sign languages - We connect local deaf people with local interpreters"]}
+vision = {"title": "Our International Vision", "content": "Sign Now is the only international social start-up that provides on-demand sign language services across the globe. <br/> We are challenging the status quo in the international sign language translation market by creating the most advanced solutions at the social, business and technological levels. <br/> Concurrently, and no less important - we aim to provide the option of making large physical events accessible to sign language interpretation, as we did successfully with the Eurovision song contest."}
+mission = {"title": "Our International Mision", "content": "Managing accessibility with the Sign Now app <br/> Helping 90 million deaf people to have better lives"}
 
 @app.route('/')
 def index():
-	return render_template('index.html', whyus=why_us)
+	return render_template('index.html', whyus=why_us ,vision=vision, mission=mission)
 
 @app.route('/blog')
 def blog():

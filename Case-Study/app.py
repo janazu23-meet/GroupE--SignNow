@@ -24,8 +24,17 @@ whyus = {"name": "Why Us?", "information": ["A combination of technology and hum
 vision = {"title": "Our International Vision", "content": "Sign Now is the only international social start-up that provides on-demand sign language services across the globe. <br/> We are challenging the status quo in the international sign language translation market by creating the most advanced solutions at the social, business and technological levels. <br/> Concurrently, and no less important - we aim to provide the option of making large physical events accessible to sign language interpretation, as we did successfully with the Eurovision song contest."}
 mission = {"title": "Our International Mision", "content": "Managing accessibility with the Sign Now app <br/> Helping 90 million deaf people to have better lives"}
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+  try:
+    contact = {
+      "name": request.form['name'], 
+      "email": request.form['email'], 
+      "subject": request.form['subject'], 
+      "message": request.form['message']}
+    except:
+      error = "Contacting failed"
+      return error
 	return render_template('index.html', why_us=whyus ,vision=vision, mission=mission)
 
 @app.route('/blog')

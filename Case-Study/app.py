@@ -58,5 +58,21 @@ def blog_single():
 def inner_page():
 	return render_template('inner-page.html')
 
+@app.route('/about')
+def about():
+	return render_template('index.html')
+
+@app.route('/services')
+def services():
+	return render_template('index.html')
+
+@app.route('/team')
+def team():
+	return render_template('index.html')
+
+@app.route('/portfolio')
+def portfolio():
+	return render_template('index.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)

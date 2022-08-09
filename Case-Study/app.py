@@ -32,7 +32,7 @@ def index():
       "email": request.form['email'], 
       "subject": request.form['subject'], 
       "message": request.form['message']}
-    except:
+  except:
       error = "Contacting failed"
       return error
 	return render_template('index.html', why_us=whyus ,vision=vision, mission=mission)

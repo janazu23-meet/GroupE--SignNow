@@ -26,6 +26,7 @@ mission = {"title": "Our International Mision", "content": "Managing accessibili
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+
 	if request.method == 'POST':
 
 		try:
@@ -38,6 +39,8 @@ def index():
 		except:
 				error = "Contacting failed"
 				return error
+
+
 	return render_template('index.html', why_us=whyus ,vision=vision, mission=mission)
 
 @app.route('/blog')

@@ -496,7 +496,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #2b2b2b;
+  background: #00008B;
   min-height: 40px;
   margin-top: 82px;
   color: #fff;
@@ -1470,7 +1470,7 @@ section {
 .blog .entry {
   padding: 30px;
   margin-bottom: 60px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px #00008B;
 }
 
 .blog .entry .entry-img {
@@ -1497,7 +1497,7 @@ section {
 
 .blog .entry .entry-meta {
   margin-bottom: 15px;
-  color: #777777;
+  color: #00008B;
 }
 
 .blog .entry .entry-meta ul {
@@ -1520,7 +1520,7 @@ section {
 }
 
 .blog .entry .entry-meta a {
-  color: #777777;
+  color: #00008B;
   font-size: 14px;
   display: inline-block;
   line-height: 1;

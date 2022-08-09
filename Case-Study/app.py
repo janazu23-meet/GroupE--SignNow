@@ -26,15 +26,17 @@ mission = {"title": "Our International Mision", "content": "Managing accessibili
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  try:
-    contact = {
-      "name": request.form['name'], 
-      "email": request.form['email'], 
-      "subject": request.form['subject'], 
-      "message": request.form['message']}
-  except:
-      error = "Contacting failed"
-      return error
+  if request.method == 'POST':
+
+    try:
+      contact = {
+        "name": request.form['name'], 
+        "email": request.form['email'], 
+        "subject": request.form['subject'], 
+        "message": request.form['message']}
+    except:
+        error = "Contacting failed"
+        return error
 	return render_template('index.html', why_us=whyus ,vision=vision, mission=mission)
 
 @app.route('/blog')

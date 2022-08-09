@@ -31,11 +31,11 @@ def index():
 
 		try:
 			contact = {
-				"name": request.form['name'], 
-				"email": request.form['email'], 
-				"subject": request.form['subject'], 
-				"message": request.form['message']}
-				db.child("Contacts").push(contact)
+			"name": request.form['name'], 
+			"email": request.form['email'], 
+			"subject": request.form['subject'], 
+			"message": request.form['message']}
+			db.child("Contacts").push(contact)
 		except:
 				error = "Contacting failed"
 				return error
